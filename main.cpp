@@ -42,10 +42,15 @@ int main(int argc, char *argv[]){
 
   auto start = chrono::high_resolution_clock::now();
 
-  //std::string result = HighestNumberCombination::combine(ta->getArray(), ta->len());
+  std::vector<size_t> matchPos = StringSearch::findSubstr(strings[0], strings[1]);
 
   auto runtime = chrono::high_resolution_clock::now() - start;
   uint64_t runtime_us = chrono::duration_cast<std::chrono::microseconds>(runtime).count();
+
+  for(size_t match : matchPos){
+    cout<<match<<" ";
+  }
+  cout<<endl;
 
   cout<<double(runtime_us)<<endl;
 
