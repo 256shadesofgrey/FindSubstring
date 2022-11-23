@@ -24,4 +24,14 @@ ex:
 When using a string, it will be used explicitly. When entering a number, it will be used as the length for the randomly generated string in its place.
 When calling without parameters, 2 strings of predefined hardcoded length will be randomly generated.
 
-# Thought process and ideas
+# Ideas
+This is a good application for a pattern searching algorithm.
+
+## Easy solution
+This approach results in worst case complexity of O(n*m), when there are multiple partial or complete matches. If this is going to be applied to text however, it will probably run in O(m+n) time, because frequent and long partial matches are unlikely.
+
+1. Go through the string, search for the first character of the substring.
+2. When a match is found, compare the other characters.
+3. After the match is found, take that position+1 and repeat the process starting at that position to find more matches.
+
+## Advanced pattern searching algorithms
