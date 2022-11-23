@@ -35,3 +35,6 @@ This approach results in worst case complexity of O(n*m), when there are multipl
 3. After the match is found, take that position+1 and repeat the process starting at that position to find more matches.
 
 ## Advanced pattern searching algorithms
+There is a plethora of algorithms that perform this pattern search more efficiently in specific situations.
+But because we do not know anything about the pattern or alphabet size, we may as well stick to the simple algorithm, because it would still outperform all of the advanced ones in case the alphabet is big, and the pattern to be matched is short.
+The simple solution also does not need any additional memory unlike all of the advanced algorithms.
